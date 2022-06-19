@@ -286,35 +286,3 @@ module.exports = {
 </details>
 
 <hr>
-
-# 以下是 webpack4 + React16 + Typescript 搭建版本
-
-> 分支是 `webpack4+React16`。
-
-自己搭的 React + Typescript 项目开发环境，也写了文章作为记录：
-
-- [我是这样搭建 Typescript+React 项目环境的！（2.7w 字详解)](https://github.com/vortesnail/blog/issues/14)
-
-该脚手架经过本人在生产环境的使用，具备可用性，而且由于自己塔的，非常灵活，希望大家也能学会自己搭一套自己的脚手架。
-
-欢迎大家阅读，评论，star！
-
-# 其它实用插件
-
-一. 如果你要开启 css module，想要通过 `className={styles['xxxxx]}` 能得到提示（比如 `xxxxx`），那你可能需要这个插件：[typescript-plugin-css-modules](https://github.com/mrmckeb/typescript-plugin-css-modules)。
-
-使用该插件时，`.vscode/settings.json` 中必须有以下配置：
-
-```json
-{
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
-}
-```
-
-然后 `tsconfig.json` 中添加以下配置：
-
-```json
-"jsx": "react",
-"plugins": [{ "name": "typescript-plugin-css-modules" }]
-```
